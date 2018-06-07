@@ -121,7 +121,7 @@ function satprogram {
     nextmode().
   }
   if satmode = 11 {
-    lock steering to srfretrograde.
+    lock steering to retrograde.
     warpheight(periapsis + 500).
     set warp to 3.
     wait until alt:radar < 5000 and velocity:surface:mag < 250.
@@ -129,7 +129,7 @@ function satprogram {
     wait 1.
     stage.
     wait 1.
-    chutes on.
+    stage.
     unlock steering.
     wait until status="landed" or status="splashed".
     return 0.
